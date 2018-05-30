@@ -1,24 +1,20 @@
 <?php
 $username = 'YOURUSERNAME';
 $password = 'YOURPASSWORD';
+$PROXY_RACK_PORT = 222;
+$PROXY_RACK_DNS = 'megaproxy.rotating.proxyrack.net';
 
-$PROXY_RACK_DNS = 'http://megaproxy.rotating.proxyrack.net:222';
+$urlToGet = 'http://ip-api.com/json';
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $urlToGet);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_PROXYPORT, $PROXY_RACK_PORT);
+    curl_setopt($ch, CURLOPT_PROXYTYPE, 'HTTP');
+    curl_setopt($ch, CURLOPT_PROXY, $PROXY_RACK_DNS);
+    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $username.':'.$password);
+    $data = curl_exec($ch);
+    curl_close($ch);
 
-$urlToGet = "http://ip-api.com/json";
-
-$auth = base64_encode($username.':'.$password);
-$aContext = array(
-    'http' => array(
-        'proxy' => 'tcp://' . PROXY_RACK_DNS,
-        'request_fulluri' => true,
-        'header' => "Proxy-Authorization: Basic $auth",
-    ),
-);
-$cxContext = stream_context_create($aContext);
-
-$contents = file_get_contents($urlToGet, False, $cxContext);
-
-if($contents !== false){
-    echo $contents;
-}
+echo $data;
 ?>

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"net/url"
-	"net/http"
 	"fmt"
 	"io/ioutil"
+	"net/http"
+	"net/url"
 	"os"
 )
 
@@ -16,10 +16,10 @@ const (
 	username = "YOURUSERNAME"
 	password = "YOURPASSWORD"
 
-	PROXY_RACK_DNS = "megaproxy.rotating.proxyrack.net"
-	PROXYRACK_PORT = "222"
+	PROXY_RACK_DNS = "unmetered.residential.proxyrack.net"
+	PROXYRACK_PORT = "9000"
 
-	urlToGet = "http://ip-api.com/json"
+	urlToGet = "http://ipinfo.io"
 )
 
 func main() {

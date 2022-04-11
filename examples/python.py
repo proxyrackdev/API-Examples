@@ -2,12 +2,12 @@
 
 import requests
 
-username = "vranesevic"
-password = "svranesevic"
+username = "YOURUSERNAME"
+password = "YOURPASSWORD"
 
-PROXY_RACK_DNS = "megaproxy.rotating.proxyrack.net:222"
+PROXY_RACK_DNS = "unmetered.residential.proxyrack.net:222"
 
-urlToGet = "http://ip-api.com/json"
+urlToGet = "http://ipinfo.io"
 
 proxy = {"http":"http://{}:{}@{}".format(username, password, PROXY_RACK_DNS)}
 

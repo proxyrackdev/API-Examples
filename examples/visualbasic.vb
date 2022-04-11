@@ -5,8 +5,8 @@ Module Module1
 
     Private Const Username As String = "YOURUSERNAME"
     Private Const Password As String = "YOURPASSWORD"
-    Private Const PROXY_RACK_DNS As String = "http://megaproxy.rotating.proxyrack.net:222"
-    Private Const UrlToGet As String = "http://ip-api.com/json"
+    Private Const PROXY_RACK_DNS As String = "http://unmetered.residential.proxyrack.net:9000"
+    Private Const UrlToGet As String = "http://ipinfo.io"
 
     Sub Main()
         Dim httpWebRequest = CType(WebRequest.Create(UrlToGet), HttpWebRequest)

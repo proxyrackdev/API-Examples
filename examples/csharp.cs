@@ -9,8 +9,8 @@ namespace ProxyRackHttpExample
     {
         private const string Username = "YOURUSERNAME";
         private const string Password = "YOURPASSWORD";
-        private const string ProxyRackDns = "http://megaproxy.rotating.proxyrack.net:222";
-        private const string UrlToGet = "http://ip-api.com/json";
+        private const string ProxyRackDns = "http://unmetered.residential.proxyrack.net:9000";
+        private const string UrlToGet = "http://ipinfo.io";
 
         public static async Task Main()
         {

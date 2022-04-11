@@ -7,10 +7,10 @@ public class Application {
     private static String USERNAME = "YOURUSERNAME";
     private static String PASSWORD = "YOURPASSWORD";
 
-    private static String PROXY_RACK_DNS = "megaproxy.rotating.proxyrack.net";
-    private static int PROXYRACK_PORT = 222;
+    private static String PROXY_RACK_DNS = "unmetered.residential.proxyrack.net";
+    private static int PROXYRACK_PORT = 9000;
 
-    private static String URL_TO_GET = "http://ip-api.com/json";
+    private static String URL_TO_GET = "http://ipinfo.io";
 
     public static void main(String[] args) throws IOException {
         final Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(PROXY_RACK_DNS, PROXYRACK_PORT));

@@ -5,7 +5,7 @@ import requests
 username = "YOURUSERNAME"
 password = "YOURPASSWORD"
 
-PROXY_RACK_DNS = "unmetered.residential.proxyrack.net:222"
+PROXY_RACK_DNS = "unmetered.residential.proxyrack.net:9000"
 
 urlToGet = "http://ipinfo.io"
 

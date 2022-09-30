@@ -50,6 +50,7 @@ func main() {
 		fmt.Printf("failed to perform GET request: %v", err)
 		os.Exit(1)
 	}
+	defer response.Body.Close()
 
 	responseBodyBytes, err := ioutil.ReadAll(response.Body)
 	if err != nil {
